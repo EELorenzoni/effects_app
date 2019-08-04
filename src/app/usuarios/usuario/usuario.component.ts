@@ -5,6 +5,7 @@ import { AppState } from 'src/app/store/app.reducer';
 import * as fromUsuarioAction from '../../store/actions/usuario.actions';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioState } from 'src/app/store/reducers';
+declare var rootWebAuth: any;
 
 @Component({
   selector: 'app-usuario',
@@ -21,6 +22,7 @@ export class UsuarioComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log('aca ta', rootWebAuth);
     this.router.params
       .subscribe(params => {
         const id = params['id'];
