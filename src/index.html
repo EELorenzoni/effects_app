@@ -14,29 +14,6 @@
 
 <body>
     <app-root></app-root>
-    <script>
-        //window.addEventListener('load', function() {
-          console.log("load html");
-    
-          var prueba1 = 'prueba1';
-    
-          var config = JSON.parse(
-            decodeURIComponent(escape(window.atob('@@config@@')))
-          );
-          console.log("config html", config);
-    
-          var rootParams = Object.assign({
-            domain: config.auth0Domain,
-            clientID: config.clientID,
-            redirectUri: config.callbackURL,
-            responseType: 'code'
-          }, config.internalOptions);
-          console.log("rootParams html", rootParams);
-          
-          var rootWebAuth = new auth0.WebAuth(rootParams);
-          console.log("rootWebAuth html", rootWebAuth);
-        //});
-      </script>
 </body>
 
 </html>
